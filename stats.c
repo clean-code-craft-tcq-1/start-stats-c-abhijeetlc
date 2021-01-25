@@ -8,9 +8,9 @@ struct Stats  {
     
 }
 
-struct Stats compute_statistics(float* numberset, int setlength)
+struct Stats compute_statistics(float numberset[], int setlength)
     
-struct Stats compute_statistics(float* numberset, int setlength)
+struct Stats compute_statistics(float numberset[], int setlength)
     {
     int i;
     float sum = 0, min = 0, max = 0 ;
