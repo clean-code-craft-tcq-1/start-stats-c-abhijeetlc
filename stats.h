@@ -18,5 +18,5 @@ void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stat
 extern int emailAlertCallCount;
 extern int ledAlertCallCount; 
 
-int emailAlerter (int emailAlertCallCount)
-int ledAlerter (int ledAlertCallCount)
+int emailAlerter (int emailAlertCallCount);
+int ledAlerter (int ledAlertCallCount);
