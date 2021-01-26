@@ -17,4 +17,4 @@ extern int emailAlertCallCount;
 extern int ledAlertCallCount; 
 
 int emailAlerter (int emailAlertCallCount) {return(emailAlertCallCount++);} 
-int ledAlerter (nt ledAlertCallCount) {return (ledAlertCallCount++);} 
+int ledAlerter (int ledAlertCallCount) {return (ledAlertCallCount++);} 
