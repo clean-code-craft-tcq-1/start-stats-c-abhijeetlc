@@ -60,7 +60,7 @@ void check_and_alert (float maxThreshold, alerter_funcptr alerters[], struct Sta
 	{
 		emailAlertCallCount=alerters[0](emailAlertCallCount_test);
 		ledAlertCallCount=alerters[1](ledAlertCallCount_test);
-		
+		printf("entered loop\n");
 		
 	}
 	//printf("%d\n",&emailAlertCallCount_test);
