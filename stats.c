@@ -12,20 +12,21 @@ struct Stats  {
     
 struct Stats compute_statistics(float numberset[], int setlength)
     {
+    
     int i;
     float sum = 0, min = 0, max = 0 ;
     struct Stats Statcalc;
     
     for (i=0 ; i < setlength ; i ++ )
     {
-    sum += numberset[i]
+           sum += numberset[i] ;
     }
     
     for (i=0 ; i < setlength - 1 ; i ++ )
     {
         if (numberset[i] < numberset[i+1] )
         {
-            min = numberset[i]
+            min = numberset[i] ;
         }
     }
     
@@ -33,7 +34,7 @@ struct Stats compute_statistics(float numberset[], int setlength)
     {
         if (numberset[i] > numberset[i+1] )
         {
-            max = numberset[i]
+            max = numberset[i] ;
         }
     }
     
