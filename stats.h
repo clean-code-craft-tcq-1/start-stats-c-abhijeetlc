@@ -9,6 +9,8 @@ typedef struct Stats  {
     
 }Stat;
 
+Stat compute_statistics(float numberset[], int setlength); 
+
 typedef int (*alerter_funcptr)(int);
 
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats);
