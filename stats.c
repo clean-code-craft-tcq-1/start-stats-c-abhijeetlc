@@ -60,10 +60,10 @@ void check_and_alert (float maxThreshold, alerter_funcptr alerters[], struct Sta
 		ledAlertCallCount=alerters[1](ledAlertCallCount_test);
 		
 	}
-	pirntf("%d\n",&emailAlertCallCount_test);
-	pirntf("%d\n",&emailAlertCallCount);
-	pirntf("%d\n",&ledAlertCallCount_test);
-	pirntf("%d\n",&ledAlertCallCount);
+	printf("%d\n",&emailAlertCallCount_test);
+	printf("%d\n",&emailAlertCallCount);
+	printf("%d\n",&ledAlertCallCount_test);
+	printf("%d\n",&ledAlertCallCount);
 	
 }
 
