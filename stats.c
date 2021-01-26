@@ -17,12 +17,12 @@ Stat compute_statistics(float numberset[], int setlength)
     float sum = 0, min = 0, max = 0 ;
     Stat Statcalc;
     
-    for (i=0 ; i<setlength ; i++ )
+    for (i=0 ; i<setlength ; i++)
     {
            sum+=numberset[i];
     }
     
-    for (i=0 ; i<setlength - 1 ; i++ )
+    for (i=0 ; i<setlength - 1 ; i++)
     {
         if (numberset[i]<numberset[i+1] )
         {
@@ -30,7 +30,7 @@ Stat compute_statistics(float numberset[], int setlength)
         }
     }
     
-    for (i=0 ; i<setlength - 1 ; i++ )
+    for (i=0 ; i<setlength - 1 ; i++)
     {
         if (numberset[i]>numberset[i+1] )
         {
@@ -47,7 +47,7 @@ Stat compute_statistics(float numberset[], int setlength)
     }
     
     
-    for (i=0 ; i<setlength - 1 ; i++ )
+    for (i=0 ; i<setlength - 1 ; i++)
     {
         if (numberset[i]>numberset[i+1] )
         {
