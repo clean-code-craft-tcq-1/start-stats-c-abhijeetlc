@@ -56,10 +56,11 @@ void check_and_alert (float maxThreshold, alerter_funcptr alerters[], struct Sta
 	int ledAlertCallCount_test=0;
 		
 	
-	if (computedStats.average>maxThreshold)
+	if (computedStats.max>maxThreshold)
 	{
 		emailAlertCallCount=alerters[0](emailAlertCallCount_test);
 		ledAlertCallCount=alerters[1](ledAlertCallCount_test);
+		
 		
 	}
 	//printf("%d\n",&emailAlertCallCount_test);
