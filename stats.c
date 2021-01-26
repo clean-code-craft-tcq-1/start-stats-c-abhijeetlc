@@ -68,7 +68,7 @@ void check_and_alert (float maxThreshold, alerter_funcptr alerters[], struct Sta
 	
 	if (computedStats.average>maxThreshold)
 	{
-		emailAlertCallCount=alerters[0];
-		ledAlertCallCount=alerters[1];
+		emailAlertCallCount=alerters[0](emailAlertCallCount);
+		ledAlertCallCount=alerters[1](ledAlertCallCount);
 	}
 }
