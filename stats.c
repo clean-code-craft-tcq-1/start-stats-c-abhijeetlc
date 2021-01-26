@@ -14,7 +14,7 @@ Stat compute_statistics(float numberset[], int setlength)
  {
     
     int i;
-    float sum = 0, min = 0, max = 0 ;
+    float sum = 0, min = numberset[0], max = numberset[0] ;
     Stat Statcalc;
     
     for (i=0;i<setlength;i++)
