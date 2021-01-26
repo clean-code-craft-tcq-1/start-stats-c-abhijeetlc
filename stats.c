@@ -8,7 +8,7 @@ struct Stats  {
     
 };
 
-struct Stats compute_statistics(float numberset[], int setlength)
+//struct Stats compute_statistics(float numberset[], int setlength)
     
 struct Stats compute_statistics(float numberset[], int setlength)
     {
@@ -41,7 +41,7 @@ struct Stats compute_statistics(float numberset[], int setlength)
     
     Statcalc.average = sum/setlength;
     Statcalc.min = min ;
-    Statcalc.max =   max ;  
+    Statcalc.max =  max ;  
     
     return Statcalc ;
     }
