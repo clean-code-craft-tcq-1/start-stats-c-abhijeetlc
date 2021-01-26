@@ -2,7 +2,7 @@
 
 
 
-float numberset[];
+float numberset[10];
 int setlength;
 int emailAlertCallCount = 0;
 int ledAlertCallCount = 0;
