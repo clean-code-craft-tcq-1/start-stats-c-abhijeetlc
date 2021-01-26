@@ -1,21 +1,26 @@
 #include "stats.h"
 
-struct Stats  {
+typedef struct Stats  {
     //struct Stats s;
     float average = 0;
     float min = 0;
-     float max = 0;
+    float max = 0;
     
-};
+}Stat;
 
+
+int emailAlertCallCount = 0;
+int ledAlertCallCount = 0;
 //struct Stats compute_statistics(float numberset[], int setlength)
-    
-struct Stats compute_statistics(float numberset[], int setlength)
+  
+Stat compute_statistics(float numberset[], int setlength); 
+  
+Stat compute_statistics(float numberset[], int setlength)
     {
     
     int i;
     float sum = 0, min = 0, max = 0 ;
-    struct Stats Statcalc;
+    Stat Statcalc;
     
     for (i=0 ; i < setlength ; i ++ )
     {
@@ -37,16 +42,11 @@ struct Stats compute_statistics(float numberset[], int setlength)
             max = numberset[i] ;
         }
     }
-    
-    
-    
+	
     Statcalc.average = sum/setlength;
     Statcalc.min = min ;
     Statcalc.max =  max ;  
     
     return Statcalc ;
+	
     }
-    
-
-int emailAlertCallCount = 0;
-int ledAlertCallCount = 0;
