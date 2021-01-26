@@ -4,8 +4,8 @@
 
 float numberset[10];
 int setlength;
-int emailAlertCallCount = 0;
-int ledAlertCallCount = 0;
+
+
 //struct Stats compute_statistics(float numberset[], int setlength)
   
 Stat compute_statistics(float numberset[], int setlength); 
@@ -50,12 +50,21 @@ void check_and_alert (float maxThreshold, alerter_funcptr alerters[], struct Sta
 {
 	emailAlertCallCount=0;
 	ledAlertCallCount=0;
+	int emailAlertCallCount_test=0;
+	int ledAlertCallCount_test=0;
+		
 	
 	if (computedStats.average>maxThreshold)
 	{
-		emailAlertCallCount=alerters[0](emailAlertCallCount);
-		ledAlertCallCount=alerters[1](ledAlertCallCount);
+		emailAlertCallCount=alerters[0](emailAlertCallCount_test);
+		ledAlertCallCount=alerters[1](ledAlertCallCount_test);
+		
 	}
+	pirntf("%d\n",&emailAlertCallCount_test);
+	pirntf("%d\n",&emailAlertCallCount);
+	pirntf("%d\n",&ledAlertCallCount_test);
+	pirntf("%d\n",&ledAlertCallCount);
+	
 }
 
 int emailAlerter (int emailAlertCallCount) {return(emailAlertCallCount++);} 
