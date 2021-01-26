@@ -1,12 +1,6 @@
 #include "stats.h"
 
-typedef struct Stats  {
-    //struct Stats s;
-    float average = 0;
-    float min = 0;
-    float max = 0;
-    
-}Stat;
+
 
 float numberset[];
 int setlength;
