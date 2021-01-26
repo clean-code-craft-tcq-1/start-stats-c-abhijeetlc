@@ -9,7 +9,7 @@
 TEST_CASE("reports average, minimum and maximum") {
     float numberset[] = {1.5, 8.9, 3.2, 4.5};
     int setlength = sizeof(numberset) / sizeof(numberset[0]);
-    Stats computedStats;
+    struct Stats computedStats;
     computedStats = compute_statistics(numberset, setlength);
     float epsilon = 0.001;
     REQUIRE(abs(computedStats.average - 4.525) < epsilon);
@@ -33,7 +33,7 @@ TEST_CASE("raises alerts when max is greater than threshold") {
 
     float numberset[] = {99.8, 34.2, 4.5};
     int setlength = sizeof(numberset) / sizeof(numberset[0]);
-    Stats computedStats;
+    struct Stats computedStats;
     computedStats = compute_statistics(numberset, setlength);
 
     const float maxThreshold = 10.2;
