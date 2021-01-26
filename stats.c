@@ -1,6 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "stats.h"
-
-
 
 float numberset[10];
 int setlength;
