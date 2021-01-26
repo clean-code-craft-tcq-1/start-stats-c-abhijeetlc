@@ -5,6 +5,8 @@
 float numberset[10];
 int setlength;
 
+int emailAlertCallCount;
+int ledAlertCallCount;
 
 //struct Stats compute_statistics(float numberset[], int setlength)
   
