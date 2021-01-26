@@ -58,8 +58,8 @@ void check_and_alert (float maxThreshold, alerter_funcptr alerters[], struct Sta
 	
 	if (computedStats.max>maxThreshold)
 	{
-		emailAlertCallCount=alerters[0](emailAlertCallCount_test);
-		ledAlertCallCount=alerters[1](ledAlertCallCount_test);
+		emailAlertCallCount=alerters[0](emailAlertCallCount);
+		ledAlertCallCount=alerters[1](ledAlertCallCount);
 		printf("entered loop\n");
 		
 	}
