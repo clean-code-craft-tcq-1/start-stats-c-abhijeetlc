@@ -50,19 +50,19 @@ Stat compute_statistics(float numberset[], int setlength)
 
 void check_and_alert (float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats)
 {
-	emailAlertCallCount=0;
-	ledAlertCallCount=0;
+	emailAlertCallCount=1;
+	ledAlertCallCount=1;
 	int emailAlertCallCount_test=0;
 	int ledAlertCallCount_test=0;
 		
 	
-	if (computedStats.max>maxThreshold)
+	/*if (computedStats.max>maxThreshold)
 	{
 		emailAlertCallCount=alerters[0](emailAlertCallCount);
 		ledAlertCallCount=alerters[1](ledAlertCallCount);
 		printf("entered loop\n");
 		
-	}
+	}*/
 	//printf("%d\n",&emailAlertCallCount_test);
 	//printf("%d\n",&emailAlertCallCount);
 	//printf("%d\n",&ledAlertCallCount_test);
