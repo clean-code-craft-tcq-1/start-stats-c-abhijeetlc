@@ -9,10 +9,12 @@ typedef struct Stats  {
     
 }Stat;
 
-typedef void (*alerter_funcptr)();
+typedef int (*alerter_funcptr)(int);
+
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats);
 
-Stat compute_statistics(float numberset[], int setlength); 
-
 extern int emailAlertCallCount;
-extern int ledAlertCallCount;
+extern int ledAlertCallCount; 
+
+int emailAlerter (int emailAlertCallCount) {return(emailAlertCallCount++);} 
+int ledAlerter (nt ledAlertCallCount) {return (ledAlertCallCount++);} 
