@@ -62,3 +62,16 @@ Stat compute_statistics(float numberset[], int setlength)
     return Statcalc ;
 	
     }
+
+void check_and_alert (float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats)
+{
+	emailAlertCallCount = 0;
+	ledAlertCallCount 0;
+	
+	if (computedStats.average > maxThreshold)
+	{
+		emailAlertCallCount = alerters [0];
+		ledAlertCallCount = alerters [1];
+	}
+}
+    
