@@ -11,18 +11,18 @@ int ledAlertCallCount = 0;
 Stat compute_statistics(float numberset[], int setlength); 
   
 Stat compute_statistics(float numberset[], int setlength)
-    {
+ {
     
     int i;
     float sum = 0, min = 0, max = 0 ;
     Stat Statcalc;
     
-    for (i=0 ; i<setlength ; i++)
+    for (i=0;i<setlength ;i++)
     {
            sum+=numberset[i];
     }
     
-    for (i=0 ; i<setlength - 1 ; i++)
+    for (i=0;i<setlength-1;i++)
     {
         if (numberset[i]<numberset[i+1] )
         {
@@ -30,7 +30,7 @@ Stat compute_statistics(float numberset[], int setlength)
         }
     }
     
-    for (i=0 ; i<setlength - 1 ; i++)
+    for (i=0;i<setlength-1;i++)
     {
         if (numberset[i]>numberset[i+1] )
         {
@@ -38,16 +38,14 @@ Stat compute_statistics(float numberset[], int setlength)
         }
     }
 	
-    Statcalc.average = (sum/setlength);
-    Statcalc.min = min ;
-    Statcalc.max =  max;  
+    //Statcalc.average = (sum/setlength);
+    //Statcalc.min = min ;
+    //Statcalc.max =  max;  
     
-    return Statcalc ;
+   //return Statcalc ;
 	
-    }
-    
-    
-    for (i=0 ; i<setlength - 1 ; i++)
+  //} 
+    for (i=0;i<setlength-1;i++)
     {
         if (numberset[i]>numberset[i+1] )
         {
@@ -57,7 +55,7 @@ Stat compute_statistics(float numberset[], int setlength)
 	
     Statcalc.average=(sum/setlength);
     Statcalc.min=min;
-    Statcalc.max=max;  
+    Statcalc.max=max; 
     
     return Statcalc;
 	
@@ -74,4 +72,3 @@ void check_and_alert (float maxThreshold, alerter_funcptr alerters[], struct Sta
 		ledAlertCallCount=alerters [1];
 	}
 }
-    
