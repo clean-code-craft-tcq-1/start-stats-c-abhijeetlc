@@ -38,10 +38,12 @@ TEST_CASE("raises alerts when max is greater than threshold") {
 }
 
 TEST_CASE("average is NaN for empty array") {
-    Stats computedStats = compute_statistics(0, 0);
+    float numberset[] = {};
+    Stats computedStats = compute_statistics(numberset, 0);
     //All fields of computedStats (average, max, min) must be
     //NAN (not-a-number), as defined in math.h
     
+    REQUIRE(!isnan(computedStats.average));
     //Design the REQUIRE statement here.
     //Use https://stackoverflow.com/questions/1923837/how-to-use-nan-and-inf-in-c
 }
