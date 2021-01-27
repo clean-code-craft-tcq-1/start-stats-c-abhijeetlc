@@ -58,5 +58,6 @@ void check_and_alert (float maxThreshold, alerter_funcptr alerters[], struct Sta
 	}
 }
 
-int emailAlerter (int emailAlertCallCount) {return(emailAlertCallCount++);} 
-int ledAlerter (int ledAlertCallCount) {return (ledAlertCallCount++);} 
+
+int emailAlerter (int emailAlertCallCount) {return(++emailAlertCallCount);} 
+int ledAlerter (int ledAlertCallCount) {return (++ledAlertCallCount);} 
