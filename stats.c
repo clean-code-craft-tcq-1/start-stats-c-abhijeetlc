@@ -12,10 +12,12 @@ Stat compute_statistics(float numberset[], int setlength);
   
 Stat compute_statistics(float numberset[], int setlength)
  {
-    
-    int i;
-    float sum = 0, min = numberset[0], max = numberset[0] ;
     Stat Statcalc;
+    int i;
+    float sum = 0;
+    Statcalc.min=numberset[0];
+    Statcalc.max=numberset[0];
+   
     
     for (i=0;i<setlength;i++)
     {
@@ -24,27 +26,25 @@ Stat compute_statistics(float numberset[], int setlength)
     
     for (i=0;i<setlength;i++)
     {
-        if (numberset[i]<min)
+        if (numberset[i]<Statcalc.min)
         {
-            min=numberset[i];
+            Statcalc.min=numberset[i];
         }
     }
     
     for (i=0;i<setlength;i++)
     {
-        if (numberset[i]>max)
+        if (numberset[i]>Statcalc.max)
         {
-            max=numberset[i];
+            Statcalc.max=numberset[i];
         }
     }
 	
     Statcalc.average=(sum/setlength);
-    Statcalc.min=min;
-    Statcalc.max=max; 
     
     return Statcalc;
 	
-    }
+  }
 
 void check_and_alert (float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats)
 {
