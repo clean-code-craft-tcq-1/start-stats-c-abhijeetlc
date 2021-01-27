@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include "stats.h"
 
 float numberset[10];
@@ -14,11 +15,15 @@ Stat compute_statistics(float numberset[], int setlength);
   
 Stat compute_statistics(float numberset[], int setlength)
  {
-    
     int i;
     float sum = 0, min = numberset[0], max = numberset[0] ;
     Stat Statcalc;
-    
+  
+    if (setlength == 0) {
+	    Statcalc.average = NULL;
+	    return Statcalc;
+    }
+
     for (i=0;i<setlength;i++)
     {
            sum+=numberset[i];
@@ -50,25 +55,17 @@ Stat compute_statistics(float numberset[], int setlength)
 
 void check_and_alert (float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats)
 {
-	emailAlertCallCount=1;
-	ledAlertCallCount=1;
+	emailAlertCallCount=0;
+	ledAlertCallCount=0;
 	int emailAlertCallCount_test=0;
 	int ledAlertCallCount_test=0;
-		
-	
-	/*if (computedStats.max>maxThreshold)
+
+	if (computedStats.max>maxThreshold)
 	{
 		emailAlertCallCount=alerters[0](emailAlertCallCount);
-		ledAlertCallCount=alerters[1](ledAlertCallCount);
-		printf("entered loop\n");
-		
-	}*/
-	//printf("%d\n",&emailAlertCallCount_test);
-	//printf("%d\n",&emailAlertCallCount);
-	//printf("%d\n",&ledAlertCallCount_test);
-	//printf("%d\n",&ledAlertCallCount);
-	
+		ledAlertCallCount=alerters[1](ledAlertCallCount);	
+	}
 }
 
-int emailAlerter (int emailAlertCallCount) {return(emailAlertCallCount++);} 
-int ledAlerter (int ledAlertCallCount) {return (ledAlertCallCount++);} 
+int emailAlerter (int emailAlertCallCount) {return(++emailAlertCallCount);} 
+int ledAlerter (int ledAlertCallCount) {return (++ledAlertCallCount);} 
